@@ -1,0 +1,6 @@
+{
+  "_doc": "Example project override, layered over default.json. Replace the areas with the parts of your codebase; areas_open false makes any other area a refused write. regression is an example project flag: the defect is a regression.",
+  "areas": ["api", "auth", "storage", "ui", "tooling", "hygiene", "performance"],
+  "areas_open": false,
+  "flags": ["blocks", "needs-provenance", "regression"]
+}

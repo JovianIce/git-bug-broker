@@ -1,0 +1,23 @@
+{
+  "_doc": "Default issue conventions; a file named by GITBUG_BROKER_RULES overrides any of these keys.",
+  "areas": [],
+  "areas_open": true,
+  "kinds": ["defect", "chore", "decision", "investigation", "idea"],
+  "flags": ["blocks", "needs-provenance"],
+  "free_prefixes": ["source/", "filed-by/"],
+  "exactly_one": ["area/", "kind/"],
+  "label_pattern": "^[a-z0-9][a-z0-9./-]*$",
+  "title": {
+    "max_chars": 80,
+    "leading_number_pattern": "^\\s*(#?\\d+[\\s.):-]|item\\s+\\d+|\\[\\d+\\])",
+    "min_words": 4,
+    "claim_markers": ["is", "are", "was", "were", "has", "have", "does", "do", "can", "cannot", "can't", "never", "only", "no", "not", "nothing", "lacks", "misses", "fails", "returns", "skips", "ignores", "leaks", "loses"],
+    "fix_prefixes": ["add", "fix", "remove", "make", "implement", "refactor", "use", "return", "change", "update", "rename", "move", "support"],
+    "fix_prefix_rejected_for": ["defect", "investigation"]
+  },
+  "body_sections": {
+    "defect": ["What", "Done when"],
+    "chore": ["What", "Done when"]
+  },
+  "section_pattern": "(?im)^[ \\t>*_#-]*{name}\\b"
+}

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-bug-broker"
+version = "0.1.0"
+description = "MCP server that lets several agents share one git-bug store while the web UI is open"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["mcp>=2.2,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/JovianIce/git-bug-broker"
+Source = "https://github.com/JovianIce/git-bug-broker"
+Issues = "https://github.com/JovianIce/git-bug-broker/issues"
+
+[project.scripts]
+git-bug-broker = "git_bug_broker.server:main"
+git-bug-broker-start = "git_bug_broker.start:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+git_bug_broker = ["rules/*.json"]
